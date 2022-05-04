@@ -17,4 +17,7 @@ values('NM',4561,'2022-02-01'),('MN',4561,'2022-02-01');
 -----------UC4------------
 select * from employeee_payroll;
 select id,Name from employeee_payroll;
+--------------UC5----------------
+select * from employeee_payroll where name='NM';
+select * from employeee_payroll where StartDate between cast('1999-08-09' as date) and getdate();
 

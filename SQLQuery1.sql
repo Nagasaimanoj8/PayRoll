@@ -42,12 +42,19 @@ select Max(Salary),Gender from employeee_payroll group by gender;
 ---UC8store employee information like employee phone,addressand department--
 Alter Table employeee_payroll add phone bigint;
 alter table employeee_payroll add Department varchar(200) not null default 'IT';
-alter table employeee_payroll add Address varchar(200)  default 'ap';
+alter table employeee_payroll add Address varchar(200) default 'ap';
 ----------------droping column----------------
 alter table employeee_payroll alter column Department bigint;
----------------------UC9eEXTENDEMPLOYEE_PAYROLL---------------	
+---------------------UC9EXTENDEMPLOYEE_PAYROLL---------------	
 exec sp_rename 'employeee_payroll.salary','BasicPay','COLUMN';
 select * from employeee_payroll 
 alter table employeee_payroll add deduction float ,TaxablePay float,IncomeTax float,NetPay float;
+---------------------UC10Make Terissa as part ofSales and Marketing Department-----------
+insert into employeee_payroll(Name,BasicPay,sales)
+values('Terisa',400000,'yes')
+select * from employeee_payroll where name= 'Terisa';
+Alter Table employeee_payroll add Sales Varchar(100);
+
+
 
 

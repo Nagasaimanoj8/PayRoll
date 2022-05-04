@@ -2,6 +2,7 @@
 create database PayRoll;
 use PayRoll;
 -----------UC2----------
+
 create table employeee_payroll(
 id int identity(1,1) primary key,
 Name varchar(200),
@@ -43,6 +44,10 @@ Alter Table employeee_payroll add phone bigint;
 alter table employeee_payroll add Department varchar(200) not null default 'IT';
 alter table employeee_payroll add Address varchar(200)  default 'ap';
 ----------------droping column----------------
-alter table table_name alter column Department biginit;
+alter table employeee_payroll alter column Department bigint;
+---------------------UC9eEXTENDEMPLOYEE_PAYROLL---------------	
+exec sp_rename 'employeee_payroll.salary','BasicPay','COLUMN';
+select * from employeee_payroll 
+alter table employeee_payroll add deduction float ,TaxablePay float,IncomeTax float,NetPay float;
 
 

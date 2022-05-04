@@ -38,6 +38,11 @@ select AVG(Salary) as Average from employeee_payroll;
 select COUNT(Salary) as Count from employeee_payroll;
 select * from employeee_payroll;
 select Max(Salary),Gender from employeee_payroll group by gender;
+---UC8store employee information like employee phone,addressand department--
 Alter Table employeee_payroll add phone bigint;
+alter table employeee_payroll add Department varchar(200) not null default 'IT';
+alter table employeee_payroll add Address varchar(200)  default 'ap';
+----------------droping column----------------
+alter table table_name alter column Department biginit;
 
 

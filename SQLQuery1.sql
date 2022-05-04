@@ -14,4 +14,7 @@ values('Nagasaimanoj',40000),('Jonamiasagan',50000);
 --passing data to akk columns so nin need t specify column names--
 insert into employeee_payroll
 values('NM',4561,'2022-02-01'),('MN',4561,'2022-02-01');
+-----------UC4------------
+select * from employeee_payroll;
+select id,Name from employeee_payroll;
 

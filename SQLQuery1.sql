@@ -20,4 +20,13 @@ select id,Name from employeee_payroll;
 --------------UC5----------------
 select * from employeee_payroll where name='NM';
 select * from employeee_payroll where StartDate between cast('1999-08-09' as date) and getdate();
+--------------UC6---------
+update employeee_PayRoll set StartDate='1999-08-09'where id=1 ;
+--------------adding gender column------
+select * from employeee_payroll;
+alter table employeee_payroll add Gender char(1);
+update employeee_payroll set Gender='M';
+-------INSERTING FEMALE----------
+insert into employeee_payroll
+values('Emily',79852,'2022-02-01','F'),('Lisbon',41547,'2022-02-06','F');
 
